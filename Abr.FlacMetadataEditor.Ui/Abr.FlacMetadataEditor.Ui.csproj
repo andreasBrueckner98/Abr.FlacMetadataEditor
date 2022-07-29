@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="JAudioTags, Version=1.0.6280.31284, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\jaudiotags_dll\JAudioTags.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Abr.FlacMetadataEditor.Logic\Abr.FlacMetadataEditor.Logic.csproj" />
+    </ItemGroup>
+    
+</Project>

@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Abr.FlacMetadataEditor.Ui.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             FontSize="22">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Content="Load..." Command="{Binding LoadDirectoryCommand}"/>
+        
+        <ListView Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Files}" SelectedItem="{Binding SelectedFile}"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Title:"/>
+        <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding TitleMus, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="Author:"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Author, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <Button Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Content="Save" Command="{Binding SaveFileCommand}"/>
+    </Grid>
+</UserControl>

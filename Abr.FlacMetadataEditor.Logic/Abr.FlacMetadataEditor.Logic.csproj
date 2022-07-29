@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="JAudioTags, Version=1.0.6280.31284, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\..\Downloads\jaudiotags_dll\JAudioTags.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
